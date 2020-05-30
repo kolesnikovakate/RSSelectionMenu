@@ -474,3 +474,10 @@ extension RSSelectionMenu {
         navigationBar.tintColor = theme.tintColor
     }
 }
+
+// MARK: - Update DataSource
+extension RSSelectionMenu {
+    public func updateFilteredDataSource(_ newDataSource: FilteredDataSource<T>) {
+        self.tableView?.updateFilteredDataSource(newDataSource)
+    }
+}

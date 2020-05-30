@@ -192,3 +192,10 @@ extension RSSelectionTableView {
         }
     }
 }
+
+// MARK: - Update Filtered DataSource
+extension RSSelectionTableView {
+    public func updateFilteredDataSource(_ newDataSource: FilteredDataSource<T>) {
+        self.selectionDataSource?.update(dataSource: newDataSource, inTableView: self)
+    }
+}
